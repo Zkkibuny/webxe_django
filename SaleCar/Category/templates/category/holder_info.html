@@ -1,0 +1,29 @@
+{% extends 'Category/base.html' %}
+
+{% block main-content %}
+<div class="left-panel">
+    <h2>Holder List</h2>
+     <table id="customer-table" style="center">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+                <th>Date Joined</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for holder in holder_list %}
+            <tr>
+                <td><a href="{{ holder.get_absolute_url }}" >{{ holder.id }}</td>
+                <td>{{ holder.name }}</td>
+                <td>{{ holder.email }}</td>
+                <td>{{ holder.phone_number }}</td>
+                <td>{{ holder.date_joined }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock main-content %}

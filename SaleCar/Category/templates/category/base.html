@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="{%static 'Category/css/style.css' %}" rel="stylesheet"/>
+<!--js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+    <title>Transvico</title>
+
+</head>
+<body>
+<!--slidebar-->
+ <div class="top-bar">
+        <div class="logo">
+            <img src="{%static 'Category/images/img.png' %}" width="50" height="50">
+        </div>
+<li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            user
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Đổi mật khẩu</a></li>
+            <li><a class="dropdown-item" href="#">123</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Đăng xuất</a></li>
+          </ul>
+        </li>
+    </div>
+    <div class="container">
+        <div class="sidebar" >
+            <ul class="menu">
+                <li class="menu-item" id="menu1">
+                    <a href="#">Cài đặt hệ thống</a>
+                    <ul class="sub-menu">
+                        <li><a href="#" class="submenu-item">Thông số chung</a></li>
+                        <li><a href="#" class="submenu-item">Danh Mục Con 1.2</a></li>
+                        <li><a href="#" class="submenu-item">Danh Mục Con 1.3</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item" id="menu2">
+                    <a href="#">Bán hàng</a>
+                    <ul class="sub-menu">
+                        <li><a href="Holder" class="submenu-item">Thông tin cổ đông</a></li>
+                        <li><a href="Car" class="submenu-item">Thông tin xe</a></li>
+                        <li><a href="#" class="submenu-item">Bán xe</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item" id="menu3">
+                    <a href="#">Báo cáo</a>
+                    <ul class="sub-menu">
+                        <li><a href="#" class="submenu-item">Báo cáo tồn</a></li>
+                        <li><a href="#" class="submenu-item">Báo cáo tổng hợp</a></li>
+                        <li><a href="#" class="submenu-item">Báo cáo lợi nhuận cổ đông</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!--main body-->
+<div class="content" id="content">
+             {% block main-content %} {% endblock main-content %}
+    </div>
+    </div>
+<!--footter-->
+<footer>
+    123
+</footer>
+</body>
+</html>

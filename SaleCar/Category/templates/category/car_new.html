@@ -1,0 +1,74 @@
+{% extends 'Category/base.html' %}
+
+{% block main-content %}
+
+<div class="left-panel">
+            <h2>Thông tin xe ô tô</h2>
+            <table id="customer-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Biển số xe</th>
+                        <th>Hãng xe</th>
+                        <th>Loại xe</th>
+                        <th>Năm sản xuất</th>
+                        <th>Màu sắc</th>
+                        <th>Ngày Nhập</th>
+<!--                         <th>Thao tác</th> -->
+                    </tr>
+                </thead>
+                     <tbody id="car-table-body">
+                      {% for car in cars %}
+            <tr>
+                <td>{{ car.id }}</td>
+                <td>{{ car.BienSo }}</td>
+                <td>{{ car.HangXe }}</td>
+                <td>{{ car.LoaiXe }}</td>
+                <td>{{ car.NamSX }}</td>
+                <td>{{ car.Color }}</td>
+                <td>{{ car.NgayNhap }}</td>
+            </tr>
+            {% endfor %}
+                     </tbody>
+
+            </table>
+            <div class="pagination">
+        <!-- Pagination links -->
+    </div>
+</div>
+<div class="right-panel" hidden="true">
+      <div id="carDetails" >
+        <h2>Chi tiết xe ô tô</h2>
+          <div class="form-field">
+              <input class="form-control" type="text" name="ID" placeholder="ID">
+          </div>
+          <div class="form-field">
+              <input class="form-control" type="text" name="data1" placeholder="Biển số xe">
+          </div>
+          <div class="form-field">
+              <input class="form-control" type="text" name="data2" placeholder="Hãng xe">
+          </div>
+          <div class="form-field">
+              <input class="form-control" type="text" name="data3" placeholder="Loại xe">
+          </div>
+          <div class="form-field">
+              <input class="form-control" type="text" name="data4" placeholder="Năm sản xuất">
+          </div>
+          <div class="form-field">
+              <input class="form-control" type="text" name="data5" placeholder="Màu sắc">
+          </div>
+          <div class="form-field">
+              <input class="form-control" type="text" name="data6" placeholder="Ngày nhập">
+          </div>
+          <!--
+        <p><strong>ID:</strong> <span id="dataID"><input type="text" readonly></span></p>
+        <p><strong>Biển số xe :</strong> <span id="data1"><input type="text" readonly></span></p>
+        <p><strong>Hãng xe :</strong> <span id="data2"><input type="text" readonly></span></p>
+        <p><strong>Loại xe :</strong> <span id="data3"><input type="text" readonly></span></p>
+        <p><strong>Năm sản xuất:</strong> <span id="data4"><input type="text" readonly></span></p>
+        <p><strong>Màu sắc :</strong> <span id="data5"><input type="text" readonly></span></p>
+        <p><strong>Ngày nhập :</strong> <span id="data6"><input type="text" readonly></span></p>-->
+      </div>
+    </div>
+
+{% endblock main-content %}

@@ -1,0 +1,29 @@
+{% extends 'Category/base.html' %}
+
+{% block main-content %}
+<div class="right-panel">
+    <div id="carDetails">
+        <h2>Chi tiết cổ đông</h2>
+        <div class="form-field">
+            <label for="car-id">Id :</label>
+            <input class="form-control" type="text" id="car-id" name="ID" value="{{ holder.id }}">
+        </div>
+        <div class="form-field">
+            <label for="car-biensoxe">Biển số:</label>
+            <input class="form-control" type="text" id="car-biensoxe" name="data1" value="{{ holder.name }}">
+        </div>
+        <div class="form-field">
+            <label for="car-hangxe">Hãng xe:</label>
+            <input class="form-control" type="text" id="car-hangxe" name="data2" value="{{ holder.email }}">
+        </div>
+        <div class="form-field">
+            <label for="car-loaixe">Loại xe:</label>
+            <input class="form-control" type="text" id="car-loaixe" name="data3" value="{{ holder.phone_number }}">
+        </div>
+        <div class="form-field">
+            <label for="car-ngaynhap">Ngày nhập:</label>
+            <input class="form-control" type="date" id="car-ngaynhap" name="data6" value="{{ holder.date_joined }}">
+        </div>
+    </div>
+</div>
+{% endblock main-content %}

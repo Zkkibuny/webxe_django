@@ -1,0 +1,64 @@
+{% extends 'Category/base.html' %}
+
+{% block main-content %}
+<div class="right-panel">
+
+    <div id="carDetails">
+        <h2>Chi tiết xe ô tô</h2>
+
+        <div class="form-field">
+            <label for="car-id">Id :</label>
+            <input class="form-control" type="text" id="car-id" name="ID" value="{{ car.id }}">
+        </div>
+        <div class="form-field">
+            <label for="car-biensoxe">Biển số:</label>
+            <input class="form-control" type="text" id="car-biensoxe" name="data1" value="{{ car.BienSo }}">
+        </div>
+        <div class="form-field">
+            <label for="car-hangxe">Hãng xe:</label>
+            <input class="form-control" type="text" id="car-hangxe" name="data2" value="{{ car.HangXe }}">
+        </div>
+        <div class="form-field">
+            <label for="car-loaixe">Loại xe:</label>
+            <input class="form-control" type="text" id="car-loaixe" name="data3" value="{{ car.LoaiXe }}">
+        </div>
+        <div class="form-field">
+            <label for="car-namsx">Năm sản xuất:</label>
+            <input class="form-control" type="text" id="car-namsx" name="data4" value="{{ car.NamSX }}">
+        </div>
+        <div class="form-field">
+            <label for="car-color">Màu sắc:</label>
+            <input class="form-control" type="text" id="car-color" name="data5" value="{{ car.Color }}">
+        </div>
+        <div class="form-field">
+            <label for="car-ngaynhap">Ngày nhập:</label>
+            <input class="form-control" type="date" id="car-ngaynhap" name="data6" value="{{ car.NgayNhap }}">
+        </div>
+    </div>
+
+    <table id="customer-table">
+        <thead>
+            <tr>
+                <th>Holder</th>
+                <th>Giá</th>
+                <th>Ghi chú</th>
+                <th>Loại Tiền</th>
+            </tr>
+        </thead>
+        <tbody id="car-table-body">
+            {% for detail in car_details %}
+                <tr>
+                    <td>{{ detail.Holder.name }}</td>
+                    <td>{{ detail.Gia }}</td>
+                    <td>{{ detail.Note }}</td>
+                    <td>{{ detail.Cost }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+
+
+
+{% endblock main-content %}

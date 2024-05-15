@@ -1,0 +1,38 @@
+{% extends 'Category/base.html' %}
+
+{% block main-content %}
+<div class="left-panel">
+            <h2>Thông tin xe ô tô</h2>
+            <table id="customer-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Biển số xe</th>
+                        <th>Hãng xe</th>
+                        <th>Loại xe</th>
+                        <th>Năm sản xuất</th>
+                        <th>Màu sắc</th>
+                        <th>Ngày Nhập</th>
+                    </tr>
+                </thead>
+                     <tbody id="car-table-body">
+                        {% for car in car_list %}
+                    <tr>
+                        <td><a href="{{ car.get_absolute_url }}" >{{ car.id }}</a></td>
+                        <td>{{ car.BienSo }}</td>
+                        <td>{{ car.HangXe }}</td>
+                        <td>{{ car.LoaiXe }}</td>
+                        <td>{{ car.NamSX }}</td>
+                        <td>{{ car.Color }}</td>
+                        <td>{{ car.NgayNhap }}</td>
+                    </tr>
+            {% endfor %}
+                     </tbody>
+
+            </table>
+            <div class="pagination">
+        <!-- Pagination links -->
+    </div>
+</div>
+
+{% endblock main-content %}
